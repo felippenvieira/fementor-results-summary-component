@@ -1,0 +1,236 @@
+:root {
+  --p1: hsl(0, 100%, 67%);
+  --p1a: hsla(0, 100%, 67%, 0.1);
+  --p2: hsl(39, 100%, 56%);
+  --p2a: hsl(39, 100%, 56%, 0.1);
+  --p3: hsl(166, 100%, 37%);
+  --p3a: hsl(166, 100%, 37%, 0.1);
+  --p4: hsl(234, 85%, 45%);
+  --p4a: hsla(234, 85%, 45%, 0.1);
+
+  --g1: hsl(252, 100%, 67%);
+  --g2: hsl(241, 81%, 54%);
+  --g3: hsla(256, 72%, 46%, 1);
+  --g4: hsla(241, 72%, 46%, 0);
+
+  --n1: hsl(0, 0%, 100%);
+  --n2: hsl(221, 100%, 96%);
+  --n2a: hsl(221, 100%, 96%, 0.5);
+  --n3: hsl(241, 100%, 89%);
+  --n4: hsl(224, 30%, 27%);
+  --n4a: hsla(224, 30%, 27%, 0.7);
+}
+
+body, h1, h2, a, p, button, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Hanken Grotesk, serif;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  background: var(--n2);
+}
+
+main {
+  margin: 0 auto;
+  background: var(--n1);
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 32px;
+}
+
+@media(max-width: 750px) {
+  main {
+    border-radius: 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+.result {
+  border-radius: 32px;
+  padding: 40px;
+  background: linear-gradient(180deg, var(--g1), var(--g2));
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+}
+
+@media(max-width: 750px) {
+  .result {
+    border-radius: 0 0 32px 32px;
+  }
+}
+
+.result-title {
+  color: var(--n3);
+  font-size: 1.5rem;
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.result-circle {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(180deg, var(--g3), var(--g4));
+  display: grid;
+  place-items: center;
+}
+
+.result-circle p {
+  color: var(--n1);
+  font-size: 4.5rem;
+  position: relative;
+  top: 25px;
+}
+
+.result-circle span {
+  color: var(--n2a);
+  position: relative;
+  top: -25px;
+  font-size: 1.125rem;
+}
+
+.result h1 {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--n1);
+}
+
+.result-description {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--n2);
+}
+
+.summary {
+  border-radius: 32px;
+  padding: 40px;
+  display: grid;
+}
+
+@media(max-width: 750px) {
+  .summary {
+    border-radius: 0;
+    gap: 20px;
+    padding: 30px;
+  }
+}
+
+.summary > p {
+  color: var(--n4);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.summary > ul > li + li {
+  margin-top: 16px;
+}
+
+.summary > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.summary > ul > li > p{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.summary > ul > li > span {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--n4);
+}
+
+.summary > ul > li > span > span{
+  color: var(--n4a);
+}
+
+.summary-reaction {
+  background: var(--p1a);
+  border-radius: 12px;
+}
+
+.summary-reaction > p {
+  font-size: 1.125rem;
+  color: var(--p1);
+}
+
+.summary-memory {
+  background: var(--p2a);
+  border-radius: 12px;
+}
+
+.summary-memory > p {
+  font-size: 1.125rem;
+  color: var(--p2);
+}
+
+.summary-verbal {
+  background: var(--p3a);
+  border-radius: 12px;
+}
+
+.summary-verbal > p {
+  font-size: 1.125rem;
+  color: var(--p3);
+}
+
+.summary-visual {
+  background: var(--p4a);
+  border-radius: 12px;
+}
+
+.summary-visual > p {
+  font-size: 1.125rem;
+  color: var(--p4);
+}
+
+.summary > button {
+  border-radius: 128px;
+  border: none;
+  background: var(--n4);
+  color: var(--n1);
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.summary > button:hover {
+  background: linear-gradient(180deg, var(--g1), var(--g2));
+}
+
+@media(max-width: 750px) {
+  .summary > button {
+    padding: 16px;
+  }
+}
+
+.attribution {
+  background: white;
+  align-self: end;
+  text-align: center;
+  padding: 30px;
+}
